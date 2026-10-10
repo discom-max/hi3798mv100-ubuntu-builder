@@ -52,7 +52,7 @@ jobs:
 
     steps:
     - name: 1. 检出代码
-      uses: actions/checkout@v7
+      uses: actions/checkout@v4
 
     - name: 2. 下载原始 USB 刷机包
       run: |
@@ -79,7 +79,7 @@ jobs:
         sudo apt-get install -y -qq qemu-user-static e2fsprogs zip
 
     - name: 5. 缓存 Ubuntu Base 镜像（版本固定，可安全复用）
-      uses: actions/cache@v7
+      uses: actions/cache@v3
       with:
         path: cache/ubuntu-base-*.tar.gz
         key: ubuntu-base-${{ inputs.base_version || '20.04.5' }}
