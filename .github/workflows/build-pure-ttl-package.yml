@@ -112,7 +112,7 @@ jobs:
         ls -lh TTL-hi3798mv100-32bit-PURE-*.zip
 
     - name: 9. 上传产物
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: pure-ttl-package
         path: |
